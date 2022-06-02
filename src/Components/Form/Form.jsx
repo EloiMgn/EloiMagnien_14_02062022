@@ -37,7 +37,6 @@ const handleSaveEmployee = (e) => {
     zip: `${zip}`,  
   }
   dispatch({type: 'ADD_EMPLOYEE', payload: employee})
-  setFirst('')
 }
 
 useEffect(() => {
@@ -58,7 +57,7 @@ useEffect(() => {
           <Dropdown label="Department" options={departments} />
         </form>
         <button onClick={e => handleSaveEmployee(e)}>Save</button>
-        <Modale modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} />
+        <Modale modalIsOpen={modalIsOpen} setIsOpen={setIsOpen} lastname={last} firstname={first}/>
       </div>
     );
   }

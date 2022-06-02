@@ -1,35 +1,20 @@
-import Modal from 'react-modal';
+import './Modale.css';
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
-
-
-Modal.setAppElement('#root');
-
-const Modale = ({modalIsOpen, setIsOpen}) => {
-
+const Modale = ({modalIsOpen, setIsOpen, firstname, lastname}) => {
+  
   function closeModal() {
     setIsOpen(false);
   }
 
-  return (
-      <Modal
-        isOpen={modalIsOpen}
-        // onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal">
-      <i className="fas fa-times" onClick={closeModal}></i>
-      <div>Un nouvel employé a été créé</div>
-    </Modal>
-  );
+  if (modalIsOpen) {
+    return (
+     <div className='modaleBg'>
+       <div className='modale'>
+         <i className="fas fa-times" onClick={closeModal}></i>
+         <div className='modale_content'>Employee {firstname + ' ' + lastname} Created!</div>
+       </div>
+     </div>
+   ); 
+  } else return null;
 }
 export default Modale
