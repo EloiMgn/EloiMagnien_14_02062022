@@ -1,0 +1,7 @@
+.input__date, .input__text, .input__select{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1rem 1rem 1rem 0;
+}

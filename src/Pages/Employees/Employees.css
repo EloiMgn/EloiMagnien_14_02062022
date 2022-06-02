@@ -1,0 +1,10 @@
+.employees{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.employees__table{
+  margin: 2rem 0;
+}
