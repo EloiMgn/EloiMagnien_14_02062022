@@ -17,7 +17,7 @@ const AddressForm = ({setStreet, setSCity, setState, setZip}) => {
   useEffect(() => {
     document.addEventListener('onSelectDropdownOption', (e)=> {
         if(e.detail.name === "States") {
-          setState(e.detail.value)
+          setState(e.detail.value.abbreviation)
         }
     })
 })

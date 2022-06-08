@@ -42,7 +42,7 @@ const handleSaveEmployee = (e) => {
 useEffect(() => {
   document.addEventListener('onSelectDropdownOption', (e)=> {
     if(e.detail.name === "Department") {
-      setDepartment(e.detail.value)
+      setDepartment(e.detail.value.name)
     }
   })
 })

@@ -1,0 +1,19 @@
+.filter-container{
+  display: flex;
+
+}
+
+.filter-label{
+  flex: 1;
+  margin-right: 10px;
+}
+
+.filter-clear{
+  margin-left: 5px;
+  margin-right: auto;
+  font-size: 1.2rem;
+  background-color: #121212;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: .3rem;
+}

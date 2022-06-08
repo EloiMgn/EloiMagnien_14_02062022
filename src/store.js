@@ -1,5 +1,5 @@
+import { configureStore } from '@reduxjs/toolkit';
 import produce from 'immer';
-import { createStore } from 'redux';
 
 const initialState = {
   employeesList : []
@@ -14,14 +14,7 @@ const  reducer = (state = initialState, action) => {
     });
   }
 
-  if (action.type === 'randomTeams') {
-    return {
-      ...state,
-      randomTeams: action.value
-    };
-  }
-
   return state;
 }
 
-export const store = createStore(reducer);
+export const store =  configureStore({reducer: reducer});
